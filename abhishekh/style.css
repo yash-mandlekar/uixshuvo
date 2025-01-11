@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Montserrat", serif;
+}
+h1{
+  font-family: "Charmonman", serif;
+}
+.heading{
+  font-weight: 700;
+  word-spacing: 35px;
+}
+.container{
+  width: 1100px;
+  margin: 0 auto;
+}
+.btns button{
+  border: 1px solid #000;
+}
+.backg{
+  padding: 10px;
+  background-color: #ffffff;
+}
+.backgIn{
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+  /* gap: 10px; */
+  height: 100%;
+  /* padding: 10px; */
+  background: url(./img/hritik.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+/* .borderwala{
+  border: 10px solid #ffffff;
+} */
+.borderwala1{
+  border: 7px solid #ffffff;
+  height: 100%;
+}
+.borderwala2 {
+  border: 9px solid #ffffff;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  /* margin: 10px; */
+  left: 0;
+  border-radius: 24px;
+}
+.borderwala4 {
+  border: 10px solid #ffffff;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  /* margin: 10px; */
+  left: 0;
+  border-radius: 24px;
+}
+.borderwala3 {
+  border-bottom: 10px solid #eeeeee;
+  border-right: 10px solid #eeeeee;
+  border-left: 10px solid #eeeeee;
+  height: 70%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  /* margin: 10px; */
+  left: 0;
+}
+.upper{
+  position: relative;
+}
+/* .upperbkg{
+  background-color: ;
+} */
