@@ -1,75 +1,65 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
 }
-html,body{
-height: 100%;
-width: 100%;
+nav {
+  height: 8%;
+  width: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  /* gap: 50px; */
+  align-items: center;
+  padding: 15px 50px;
+  border-radius: 40px;
 }
-.main{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: black; */
-}
-nav{
-    height: 8%;
-    width: 100%;
-    background-color: #F5F5F5;
-    display: flex;
-    justify-content: space-between;
-    /* gap: 50px; */
-    align-items: center;
-    padding: 0 50px;
-    border-radius: 40px;
-    
-}
-.left1{
-    display: flex;
-    align-items: center;
-  gap: 300px;
+.left1 {
+  display: flex;
+  align-items: center;
+  gap: 220px;
   text-transform: capitalize;
   font-family: sans-serif;
   font-size: 14px;
-  /* color: #989898; */
+  letter-spacing: 1px;
+  color: #4c4c4c;
 }
-.left{
-    display: flex;
-    gap: 50px;
-
+.left {
+  display: flex;
+  gap: 50px;
 }
-.mid{
-    height: 5%;
+.mid {
+  height: 5%;
 }
-.mid img{
-    height: 50px
-    /* width: 20%; */
- }
-.right1{
-    display: flex;
-    align-items: center;
+.mid img {
+  height: 40px;
+  /* width: 20%; */
+}
+.right1 {
+  display: flex;
+  align-items: center;
   gap: 80px;
 }
-.right{
-    height: 100%;
-    /* width: 20%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    padding: 5px 10px;
-    border-radius: 40px;
-    background-color: #ffffff;
-    text-transform: capitalize;
-    font-family: sans-serif;
-    font-size: 12px;
-      /* color: #989898;  */
+.right {
+  height: 100%;
+  /* width: 20%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 5px 10px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  /* color: #989898;  */
 }
-.right svg{
-    height: 20px;
+.right svg {
+  height: 20px;
 }
-.rightsvg svg{
-    height: 20px;
+.rightsvg svg {
+  height: 20px;
 }

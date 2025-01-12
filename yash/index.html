@@ -1,12 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: voyage-Regular;
+        src: url(./Voyage-Regular.ttf);
+      }
+      :root {
+        --height: 500px;
+        --transform: 5;
+      }
+      .feature {
+        width: 100%;
+        animation: move 3s ease-in-out;
+        padding: 0 0 100px 0;
+      }
+      .feature-title {
+        font-family: voyage-Regular, sans-serif;
+        font-weight: 300;
+        font-size: 65px;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 40px 0;
+      }
+      .feature .img-cnt {
+        width: 100%;
+        height: calc(var(--height) + 90px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .feature .img-cnt img {
+        height: var(--height);
+        border: 10px solid white;
+        object-fit: cover;
+        border-radius: 25px;
+        transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+        position: absolute;
+        top: 0%;
+        cursor: pointer;
+      }
+      .m-1 {
+        z-index: 1;
+        transform: translate(calc(var(--transform) * -34%), 7.5%);
+      }
+      .m-2 {
+        z-index: 2;
+        height: calc(var(--height) + 30px) !important;
+        transform: translate(calc(var(--transform) * -22%), 5%);
+      }
+      .m-3 {
+        z-index: 3;
+        height: calc(var(--height) + 60px) !important;
+        transform: translate(calc(var(--transform) * -10%), 2.5%);
+      }
+      .m-4 {
+        z-index: 4;
+        height: calc(var(--height) + 90px) !important;
+        transform: translate(calc(var(--transform) * 0%), 0%);
+      }
+      .m-5 {
+        z-index: 3;
+        height: calc(var(--height) + 60px) !important;
+        transform: translate(calc(var(--transform) * 10%), 2.5%);
+      }
+      .m-6 {
+        z-index: 2;
+        height: calc(var(--height) + 30px) !important;
+        transform: translate(calc(var(--transform) * 22%), 5%);
+      }
+      .m-7 {
+        z-index: 1;
+        transform: translate(calc(var(--transform) * 34%), 7.5%);
+      }
+      @keyframes move {
+        0% {
+          --transform: 0;
+        }
+        100% {
+          --transform: 5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="feature">
+      <div class="feature-title">FEATURED COLLECTION</div>
+
+      <div class="img-cnt"></div>
+    </div>
+
+    <script>
+      const imgcnt = document.querySelector(".img-cnt");
+      var arr = [
+        {
+          src: "https://images.pexels.com/photos/157675/fashion-men-s-individuality-black-and-white-157675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+          src: "https://images.pexels.com/photos/3662357/pexels-photo-3662357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1618886614638-80e3c103d31a?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          src: "https://images.pexels.com/photos/914472/pexels-photo-914472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1492447273231-0f8fecec1e3a?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1552168212-9ceb61083ba0?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+        {
+          src: "https://images.unsplash.com/photo-1536303158031-c868b371399f?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        },
+      ];
+      temp = ``;
+      arr.forEach((item, i) => {
+        temp += `<img src=${item.src} alt="outfit" class="m-${i + 1}" />`;
+      });
+      imgcnt.innerHTML = temp;
+
+      imgcnt.addEventListener("click", (e) => {
+        // swap classes and make the clicked image the center one
+        if (e.target.tagName === "IMG") {
+          document
+            .querySelector(".m-4")
+            .classList.add(
+              `m-${parseInt(e.target.classList.value.split("-")[1])}`
+            );
+          document.querySelector(".m-4").classList.remove("m-4");
+          e.target.classList.remove(
+            `m-${parseInt(e.target.classList.value.split("-")[1])}`
+          );
+          e.target.classList.add("m-4");
+        }
+      });
+    </script>
+  </body>
 </html>

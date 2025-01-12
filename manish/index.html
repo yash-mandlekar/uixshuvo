@@ -1,60 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="./manish/style.css" />
+  </head>
 
-<body>
-    <div class="w-full h-screen bg-white flex justify-center py-10">
+  <body>
+    <div class="w-full h-screen bg-white flex justify-center py-10 relative">
+      <div
+        class="w-[90%] h-[60%] bg-[#e4f2f0] flex justify-between p-10 items-start rounded-3xl relative"
+      >
+        <h1 class="lola">
+          ELEVATE YOUR WAAROBE <br />
+          WITH OUR FASHION FINDS
+        </h1>
 
-        <div class="w-[90%] h-[60%] bg-[#e4f2f0] flex justify-between p-10 items-start rounded-3xl relative">
-            <h1 class="lola">ELEVATE YOUR WAAROBE <br> WITH OUR FASHION FINDS</h1>
-            
-            <p class="text-gray-500 mt-10 pola">Elevate Your Wardrobe With Our fashion <br> Finds.discover your
-                signature style at <br> fashion avenue</p>
+        <p class="text-gray-500 mt-10 pola">
+          Elevate Your Wardrobe With Our fashion <br />
+          Finds.discover your signature style at <br />
+          fashion avenue
+        </p>
+      </div>
+
+      <div
+        class="w-[83%] h-[65%] absolute top-[30%] overflow-hidden rounded-3xl flex flex-col"
+      >
+        <div
+          class="w-[120px] h-[110px] flex items-center justify-center rounded-full bg-[#e4f2f0] p-2 absolute right-[30%]"
+        >
+          <div
+            class="btw w-[100px] h-[100px] p-2 rounded-full bg-black flex items-center justify-center"
+          >
+            <svg
+              viewBox="0 0 200 200"
+              width="200"
+              height="200"
+              xmlns="http://www.w3.org/2000/svg"
+              class="link__svg"
+              aria-labelledby="link1-title link1-desc"
+            >
+              <title id="link1-title">Get your passes now</title>
+              <desc id="link1-desc"></desc>
+              <path
+                id="link-circle"
+                class="link__path"
+                d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+                stroke="none"
+                fill="none"
+              ></path>
+              <path
+                class="link__arrow"
+                d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115"
+                fill="none"
+                stroke="white"
+                stroke-width="2"
+              ></path>
+              <text class="link__text">
+                <textPath href="#link-circle" stroke="none">
+                  EXPLORE MORE . EXPLORE MORE .
+                </textPath>
+              </text>
+            </svg>
+          </div>
         </div>
-
-        <div class="w-[83%] h-[65%] absolute top-[30%] overflow-hidden  rounded-3xl flex flex-col">
-            <div class="w-[120px] h-[110px]  flex items-center justify-center rounded-full bg-[#e4f2f0]  p-2 fixed right-[30%]">
-                <div class="btw w-[100px] h-[100px] p-2 rounded-full bg-black flex items-center justify-center "><svg
-                    viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg" class="link__svg"
-                    aria-labelledby="link1-title link1-desc">
-                    <title id="link1-title">Get your passes now</title>
-                    <desc id="link1-desc"></desc>
-                    <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
-                        stroke="none" fill="none"></path>
-                    <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" stroke="white" stroke-width="2"></path>
-                    <text class="link__text">
-                        <textPath href="#link-circle" stroke="none">EXPLORE MORE . EXPLORE MORE .</textPath>
-                    </text>
-                </svg></div>
+        <div class="w-full h-[10%] flex">
+          <div class="w-[50%] lefty h-full">
+            <div class="baba">
+              <h1>Our New Collection Introduction</h1>
             </div>
-            <div class="w-full h-[10%]   flex ">
-                <div class="w-[50%] lefty h-full">
-                    <div class="baba">
-                        <h1>Our New Collection Introduction</h1>
-                    </div>
-                </div>
-                <div class="w-[50%] righty h-full ">
-                    <div class="bacha"></div>
-                </div>
-            </div>
-            <div class="grow w-full h-[90%] bg-[#c5cfd5] ">
-                <img class="w-full h-full object-contain" src="./model.png" alt="">
-
-            </div>
-
-
-
+          </div>
+          <div class="w-[50%] righty h-full">
+            <div class="bacha"></div>
+          </div>
         </div>
+        <div class="grow w-full h-[90%] bg-[#c5cfd5]">
+          <img class="w-full h-full object-contain" src="./img/model.png" alt="" />
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

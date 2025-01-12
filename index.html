@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var isha = ``;
+      // var abhishekh = ``;
+      // var manish = ``;
+      // var yash = ``;
+      var arr = ["isha", "abhishekh", "yash","manish"];
+      async function get_sections(name) {
+        const res = await fetch(`./${name}/index.html`);
+        document.write(await res.text());
+      }
+
+      arr.forEach((name) => {
+        get_sections(name);
+      });
+
+      // fetch("./isha/index.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     isha = data;
+      //   });
+
+      // fetch("./abhishekh/index.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     abhishekh = data;
+      //   });
+
+      // fetch("./manish/index.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     manish = data;
+      //   });
+
+      // fetch("./yash/index.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     yash = data;
+      //   });
+
+      // setTimeout(() => {
+      //   document.write(isha);
+      //   document.write(abhishekh);
+      //   document.write(yash);
+      //   document.write(manish);
+      // }, 1000);
+    </script>
+  </body>
 </html>
